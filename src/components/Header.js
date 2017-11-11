@@ -12,7 +12,7 @@ class Header extends Component {
 							<Link className="page-link" to="/">home</Link>
 							<Link className="page-link" to="/profile">profile</Link>
 							<Link className="page-link" to="/work">work</Link>
-							<Link className="page-link" to="/portfolio">portfolio</Link>
+							<Link className="page-link" to="/study">study</Link>
 						</div>
 					</nav>
 				</div>

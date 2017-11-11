@@ -5,7 +5,7 @@ import Footer from './Footer';
 import Home from './Home';
 import Profile from './Profile';
 import Work from './Work';
-import Portfolio from './Portfolio';
+import Study from './Study';
 
 const App = () => {
 	return (
@@ -17,7 +17,7 @@ const App = () => {
 						<Route exact path="/" component={Home}/>
 						<Route path="/profile" component={Profile}/>
 						<Route path="/work" component={Work}/>
-						<Route path="/portfolio" component={Portfolio}/>
+						<Route path="/study" component={Study}/>
 					</Switch>
 				</div>
 				<Footer/>

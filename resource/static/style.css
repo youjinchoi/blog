@@ -69,16 +69,28 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 .site-nav { float: right; line-height: 56px; }
 .site-nav .page-link { line-height: 1.5em; }
 .site-nav .page-link:not(:first-child) { margin-left: 10px; }
-@media screen and (max-width: 600px) { .site-nav { position: fixed; top: 0px; right: 10px; text-align: right; }
+@media screen and (max-width: 600px) {
+    .site-nav { position: fixed; top: 0px; right: 10px; text-align: right; }
     .site-nav:hover .trigger { display: block; padding-bottom: 5px; }
-    .site-nav .page-link { display: line; } }
+    .site-nav .page-link { display: line; }
+}
 
 .header-bar { left: 0px; top: 0px; position: relative; font-size: 20px; display: block; opacity: 0.75; width: 100%; text-align: center; padding-top: 25px; line-height: 3em; z-index: 25; }
 .header-bar h1 { color: #FF3636; font-size: 70px; margin: 15px; }
+.header-bar .first-title { font-size: 55px; }
 .header-bar h2 { font-size: 25px; }
+
+/** iPhone5 */
+@media screen and (max-width: 320px) {
+    .header-bar h1 { color: #FF3636; font-size: 50px; margin: 15px; }
+    .header-bar .first-title { font-size: 40px; }
+    .header-bar h2 { font-size: 25px; }
+}
+
 
 /** Site footer  ********************************************************** */
 .site-footer { border-top: 1px solid #333; font-size: 10px; background-color: #333; padding: 2px; color: #aaa; position: fixed; left: 0px; bottom: 0px; height: 25px; width: 100%; }
+.site-footer .wrapper p { text-align: center; }
 
 /** Pagination   ********************************************************** */
 .pagination { max-width: -webkit-calc(800px - (50px * 2)); text-align: center; width: 100%; position: fixed; bottom: 50px; }
@@ -125,11 +137,19 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .clearfix:after { clear: both; }
 
-.project { width: 33.33%; height: 250px; float: left; vertical-align: middle; box-sizing: border-box; padding: 10px; }
+.project { width: 100%; height: 250px; float: left; vertical-align: middle; box-sizing: border-box; padding: 10px; }
+
+@media screen and (min-width: 768px) {
+    .project { width: 50%; }
+}
+
+@media screen and (min-width: 1024px) {
+    .project { width: 33.33%; }
+}
 
 .thumbnail { width: 100%; height: 230px; overflow: hidden; }
 
-.thumbnail img { width: 500px; height: auto; position: relative; left: -25%; top: -5%; }
+.thumbnail img { width: auto; height: auto; }
 
 .thumbnail a { float: left; position: relative; width: 100%; height: 230px; }
 
@@ -154,6 +174,9 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 .three { width: 100%; }
 
 .caption { height: 100%; color: #aaa; text-align: center; vertical-align: middle; font-size: 12px; }
+
+/** Home */
+.home .description { line-height: 1.5; }
 
 /** Syntax highlighting styles */
 .highlight { background: #fff; }
