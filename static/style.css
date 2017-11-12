@@ -36,7 +36,7 @@ a { color: #666; text-decoration: none; /*
 &:visited { color: darken($brand-color, 15%);
 }
 */ }
-a:hover { color: #FF3636; text-decoration: none; }
+a:hover { text-decoration: none; }
 
 article a { color: #FF3636; font-weight: 100; }
 article a:hover { text-decoration: none; }
@@ -76,7 +76,7 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 }
 
 .header-bar { left: 0px; top: 0px; position: relative; font-size: 20px; display: block; opacity: 0.75; width: 100%; text-align: center; padding-top: 25px; line-height: 3em; z-index: 25; }
-.header-bar h1 { color: #FF3636; font-size: 70px; margin: 15px; }
+.header-bar h1 { font-size: 70px; margin: 15px; }
 .header-bar .first-title { font-size: 55px; }
 .header-bar h2 { font-size: 25px; }
 
@@ -177,6 +177,14 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 /** Home */
 .home .description { line-height: 1.5; }
+
+
+/** Color Set */
+.color1, .hoverColor1:hover { color: #ff3636 }
+.color2, .hoverColor2:hover { color: #663399 }
+.color3, .hoverColor3:hover { color: #4682b4 }
+.color4, .hoverColor4:hover { color: #2e8b57 }
+.color5, .hoverColor5:hover { color: #191970 }
 
 /** Syntax highlighting styles */
 .highlight { background: #fff; }

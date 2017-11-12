@@ -8,13 +8,14 @@ import Work from './Work';
 import Study from './Study';
 
 const App = () => {
+	const colorSet = Math.floor((Math.random() * 5) + 1);
 	return (
 		<Router>
 			<div>
-		        <Header/>
+		        <Header colorSet={colorSet}/>
 				<div className="page-content">
 					<Switch>
-						<Route exact path="/" component={Home}/>
+						<Route exact path="/" render={() => <Home colorSet={colorSet}/>}/>
 						<Route path="/profile" component={Profile}/>
 						<Route path="/work" component={Work}/>
 						<Route path="/study" component={Study}/>
