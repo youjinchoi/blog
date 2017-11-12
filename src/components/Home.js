@@ -7,7 +7,7 @@ class Home extends Component {
             <div className="wrapper home">
                 <div className="header-bar">
                     <h1 className={"first-title color" + this.props.colorSet}>DEVELOPER</h1>
-                    <h1 className={"first-title color" + this.props.colorSet}>YOUJIN CHOI</h1>
+                    <h1 className={"second-title color" + this.props.colorSet}>YOUJIN CHOI</h1>
                     <h2 className="description">Hello! I'm a full-stack web developer.<br/>This GitHub Page uses <a href="https://reactjs.org/" target="_blank">React JS</a>!</h2>
                     <br/>
                     <hr/>
