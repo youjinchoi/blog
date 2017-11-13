@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Header from './Header';
-import Footer from './Footer';
+import Header from './gnb/Header';
+import Footer from './gnb/Footer';
 import Home from './Home';
 import Profile from './Profile';
 import Work from './Work';
 import Study from './Study';
+import Document from './Document';
 
 const App = () => {
 	const colorSet = Math.floor((Math.random() * 5) + 1);
@@ -19,6 +20,7 @@ const App = () => {
 						<Route path="/profile" component={Profile}/>
 						<Route path="/work" component={Work}/>
 						<Route path="/study" component={Study}/>
+						<Route path="/documents/:documentId" component={Document}/>
 					</Switch>
 				</div>
 				<Footer/>

@@ -1,48 +1,62 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import $ from "jquery";
+import Timestamp from "./common/Timestamp"
 
 class Home extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            documents: []
+        };
+    }
+
     render() {
         return (
             <div className="wrapper home">
                 <div className="header-bar">
                     <h1 className={"first-title color" + this.props.colorSet}>DEVELOPER</h1>
                     <h1 className={"second-title color" + this.props.colorSet}>YOUJIN CHOI</h1>
-                    <h2 className="description">Hello! I'm a full-stack web developer.<br/>This GitHub Page uses <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React JS</a>!</h2>
+                    <h2 className="description">Hello! I'm a full-stack web developer.<br/>This GitHub Page uses <a className={"hoverColor" + this.props.colorSet} href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React JS</a>!</h2>
                     <br/>
                     <hr/>
                     <br/>
                 </div>
+                <ul className="post-list">
+                    {this.state.documents.map((document, index) => {
+                        return (
+                            <li key={index}>
+                                <h2><Link className={"post-title hoverColor" + this.props.colorSet} to={"/documents/" + document.id}>{document.title}</Link></h2>
+                                <p className="post-meta"><Timestamp timestamp={document.createDate}/></p>
+                                <p>{document.summary}</p>
+                                <br/>
+                                <hr/>
+                            </li>
+                        );
+                    })}
+                </ul>
             </div>
         );
     }
 
-    getPostList = () => {
-        return (
-            <ul className="post-list">
-             <li>
-             <h2><Link className="post-title" to="#">a post with code</Link></h2>
-             <p className="post-meta">July 15, 2015 — 15:09</p>
-             <p>an example of a blog post with some code</p>
-             <br/>
-             <hr/>
-             </li>
-             <li>
-             <h2><Link className="post-title" to="#">a post with images</Link></h2>
-             <p className="post-meta">May 15, 2015 — 21:01</p>
-             <p>this is what included images could look like</p>
-             <br/>
-             <hr/>
-             </li>
-             <li>
-             <h2><Link className="post-title" to="#">a post with formatting and links</Link></h2>
-             <p className="post-meta">March 15, 2015 — 16:40</p>
-             <p>march &amp; april, looking forward to summer</p>
-             <br/>
-             <hr/>
-             </li>
-             </ul>
-        );
+    componentDidMount() {
+        this.getRecentDocuments();
+    }
+
+    getRecentDocuments = () => {
+        $.ajax({
+            url: "/documents/list.json",
+            type: "get",
+            dataType: "json",
+            success: function(resp) {
+                this.setState({
+                    documents: resp
+                });
+            }.bind(this),
+            error: function(resp, err) {
+            },
+            timeout: 2000
+        });
     }
 }
 

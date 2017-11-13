@@ -1,0 +1,18 @@
+{
+  "title": "React로 GitHub Page 만들기",
+  "createDate": 1510578723697,
+  "contents": [
+    {
+      "type": "text",
+      "value": "나도 GitHub Page로 내 블로그를 만들어보기로 했다! 블로그도 만들고 깃헙에 커밋도 하고 링크드인에도 한줄 추가하고..ㅎㅅㅎ 구글링을 해보니 대부분 jekyll이라는걸 사용하는 것 같던데, 나는 이왕 하는거 지금 회사 업무 하면서도 사용중인 React로 하고 싶었다. 그래서 도전!"
+    },
+    {
+      "type": "text",
+      "value": "jekyll은 GitHub Page가 공식 지원하는 것 같았다. 안내페이지에 아예 Blogging with Jekyll이라는 메뉴가 있더라. 그래서 더 쓰기 싫었다.ㅎㅎㅎ"
+    },
+    {
+      "type": "text",
+      "value": "결론은 어찌어찌하여 React app을 GitHub Page에 올리는데 성공했다. git 레포지토리를 clone한 후 document용 json파일을 추가, 빌드 후 나온 결과물을 commit, push하면 내 블로그에 글이 써진다. 자세한 내용은 To be continued..."
+    }
+  ]
+}
