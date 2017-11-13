@@ -5,7 +5,7 @@ class Footer extends Component {
     return (
         <footer className="site-footer">
             <div className="wrapper">
-                <p>This site was built by customizing <a href="https://github.com/bogoli/-folio" target="_blank">*folio</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. © 2017</p>
+                <p>This site was built by customizing <a href="https://github.com/bogoli/-folio" target="_blank" rel="noopener noreferrer">*folio</a> and is hosted on <a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a>. © 2017</p>
             </div>
         </footer>
     );

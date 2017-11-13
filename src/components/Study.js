@@ -6,18 +6,29 @@ const Study = () => {
             <div className="post">
                 <header className="post-header">
                     <h1 className="post-title">study</h1>
-                    <h5 className="post-description"></h5>
                 </header>
                 <article className="post-content">
                     <div className="project ">
                         <div className="thumbnail">
                             <a href="#">
                                 <img className="thumbnail" src="/static/ds.jpg"/>
-                            <span>
-                                <h1>Basic</h1>
-                                <br/>
-                                <p>Data Structures<br/>and<br/>Algorithms</p>
-                            </span>
+                                <span>
+                                    <h1>Basic</h1>
+                                    <br/>
+                                    <p>Data Structures<br/>Algorithms</p>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="project ">
+                        <div className="thumbnail">
+                            <a href="#">
+                                <img className="thumbnail" src="/static/frontend.jpg"/>
+                                <span>
+                                    <h1>Front End</h1>
+                                    <br/>
+                                    <p>JavaScript<br/>ReactJS</p>
+                                </span>
                             </a>
                         </div>
                     </div>
