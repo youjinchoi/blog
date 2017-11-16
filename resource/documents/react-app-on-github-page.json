@@ -12,7 +12,27 @@
     },
     {
       "type": "text",
-      "value": "결론은 어찌어찌하여 React app을 GitHub Page에 올리는데 성공했다. git 레포지토리를 clone한 후 document용 json파일을 추가, 빌드 후 나온 결과물을 commit, push하면 내 블로그에 글이 써진다. 자세한 내용은 To be continued..."
+      "value": "결론은 어찌어찌하여 React app을 GitHub Page에 올리는데 성공했다. git 레포지토리를 clone한 후 document용 json파일을 추가, 빌드 후 나온 결과물을 commit, push하면 내 블로그에 글이 써진다."
+    },
+    {
+      "type": "text",
+      "value": "React로 돌아가는 SPA(Single Page Application)을 Github Page에서 돌아가게 하려면, 먼저  index.html과 404.html을 설정해 주어야 한다. index.html은 홈 url(내 경우엔  http://youjinchoi.github.io)로 접속했을 때 내려주는 페이지이고, 404.html은 url에 해당하는 페이지가 없을 때 내려주는 페이지이다."
+    },
+    {
+      "type": "text",
+      "value": "여기서 404.html은 본래의 목적과 다르게 쓰이는데, SPA의 경우 최초 접속시 필요한 모든 스크립트를 로딩하고(코드 스플릿을 하지 않았다고 가정), 현재의 url에 따라 라우팅을 해주기 때문에 어떤 페이지를 접근하든지 동일한 html을 내려주어야 한다. 그 역할을 404.html이 해주게 된다. 즉 index.html과 404.html은 파일명만 다르고 내용은 동일해야 한다."
+    },
+    {
+      "type": "text",
+      "value": "두 html 안에서는 React 어플리케이션이 돌아갈 수 있도록 스크립트를 로딩해주면 된다. 정리하고 보니 별 것 없구나."
+    },
+    {
+      "type": "text",
+      "value": "이 방법의 단점은 404.html이 의도와 다르게 쓰인다는 것(http status code도 404로 반환된다), SEO(검색 최적화)가 어렵다는 것인데, 나는 내 글이 여기저기에  노출되는 것을 좋아하지 않으므로 이 정도 단점은 넘어가기로 하였다."
+    },
+    {
+      "type": "text",
+      "value": "글을 작성하고, 작성된 글을 불러와 페이지에 뿌려주는 부분은 좀 더 직관적이고 간단한 방법이 없을지 계속 고민중이다. 다시 To be continued..."
     }
   ]
 }
