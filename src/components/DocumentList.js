@@ -1,27 +1,32 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import queryString from 'query-string';
 import $ from "jquery";
 import Timestamp from "./common/Timestamp"
 
-class Home extends Component {
+class DocumentList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            documents: []
+            documents: null
         };
     }
 
     render() {
+        if (!this.state.documents) {
+            return null;
+        }
+
+        if (this.state.documents.length == 0) {
+            return (
+                <div className="wrapper home">
+                    no document yet T.T
+                </div>
+            );
+        }
+
         return (
             <div className="wrapper home">
-                <div className="header-bar">
-                    <h1 className={"first-title color" + this.props.colorSet}>DEVELOPER</h1>
-                    <h1 className={"second-title color" + this.props.colorSet}>YOUJIN CHOI</h1>
-                    <h2 className="description">Hello! I'm a full-stack web developer.<br/>This GitHub Page uses <a className={"hoverColor" + this.props.colorSet} href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React JS</a>!</h2>
-                    <br/>
-                    <hr/>
-                    <br/>
-                </div>
                 <ul className="post-list">
                     {this.state.documents.map((document, index) => {
                         return (
@@ -40,12 +45,13 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        this.getRecentDocuments();
+        this.getDocuments();
     }
 
-    getRecentDocuments = () => {
+    getDocuments = () => {
+        const qs = queryString.parse(this.props.location.search);
         $.ajax({
-            url: "/documents/list-all.json",
+            url: "/documents/list-" + (qs.category || "all") + ".json",
             type: "get",
             dataType: "json",
             success: function(resp) {
@@ -60,4 +66,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default DocumentList;

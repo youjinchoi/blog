@@ -31,10 +31,10 @@ class Document extends Component {
                             	);
                         	} else if (content.type == "ul") {
                         		return (
-                        		    <ul>
+                        		    <ul key={index}>
                         		    	{content.value.map((data, index)=>{
                         		    		return (
-                        		    		    <li>{data}</li>		
+                        		    		    <li key={index}>{data}</li>
                         		    		);
                         		    	})}
                         		    </ul>		

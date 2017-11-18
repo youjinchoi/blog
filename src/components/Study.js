@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Study = () => {
     return (
@@ -10,26 +11,26 @@ const Study = () => {
                 <article className="post-content">
                     <div className="project ">
                         <div className="thumbnail">
-                            <a href="#">
-                                <img className="thumbnail" src="/static/ds.jpg"/>
+                            <Link to="/documents?category=basic">
+                                <img className="thumbnail" src="/static/basic.jpg"/>
                                 <span>
                                     <h1>Basic</h1>
                                     <br/>
                                     <p>Data Structures<br/>Algorithms</p>
                                 </span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="project ">
                         <div className="thumbnail">
-                            <a href="#">
+                            <Link to="/documents?category=frontend">
                                 <img className="thumbnail" src="/static/frontend.jpg"/>
                                 <span>
                                     <h1>Front End</h1>
                                     <br/>
                                     <p>JavaScript<br/>ReactJS</p>
                                 </span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </article>

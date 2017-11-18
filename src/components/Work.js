@@ -3,7 +3,7 @@ import React from 'react';
 const Work = () => {
     return (
         <div className="wrapper">
-            To be continued...
+            Coming soon..?
         </div>
     );
 }

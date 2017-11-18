@@ -6,6 +6,7 @@ import Home from './Home';
 import Profile from './Profile';
 import Work from './Work';
 import Study from './Study';
+import DocumentList from './DocumentList';
 import Document from './Document';
 
 const App = () => {
@@ -19,8 +20,9 @@ const App = () => {
 						<Route exact path="/" render={() => <Home colorSet={colorSet}/>}/>
 						<Route path="/profile" component={Profile}/>
 						<Route path="/work" component={Work}/>
-						<Route path="/study" component={Study}/>
-						<Route path="/documents/:documentId" component={Document}/>
+						<Route exact path="/study" component={Study}/>
+						<Route exact path="/documents" render={(routeProps) => <DocumentList {...routeProps } colorSet={colorSet}/>}/>
+						<Route exact path="/documents/:documentId" component={Document}/>
 					</Switch>
 				</div>
 				<Footer/>
