@@ -5,6 +5,122 @@
     {
       "type": "text",
       "value": "코세라 자료구조 강의를 수강하고 느낀점 혹은 중요 내용을 정리할 것이당. 꼭 해야함.."
+    },
+    {
+      "type": "h4",
+      "value": "Array"
+    },
+    {
+      "type": "ul",
+      "value": [
+      	"contiguous area of memory consisting of equal-size elements indexed by contiguous integers.", 
+      	"constant-time access to any element.", 
+      	"constant time to add/remove at the end.",
+      	"linear time to add/remove at an arbitrary location."
+      ]
+    },
+    {
+      "type": "h4",
+      "value": "Linked List"
+    },
+    {
+      "type": "ul",
+      "value": [
+      	"Constant time to insert at or remove from the front.", 
+      	"With tail and doubly-linked, constant time to insert at or remove from the back.", 
+      	"O(n) time to find arbitrary element.",
+      	"List elements need not be contiguous.",
+      	"With doubly-linked list, constant time to insert between nodes or remove a node."
+      ]
+    },
+    {
+      "type": "h4",
+      "value": "Stack"
+    },
+    {
+      "type": "ul",
+      "value": [
+      	"abstract data type with the following operations: Push, Top, Pop, Empty", 
+      	"can be implemented with either an array or a linked list.", 
+      	"each stack operation is O(1): Push, Pop, Top, Empty.",
+      	"ocassionaly known as LIFO queues"
+      ]
+    },
+    {
+      "type": "h4",
+      "value": "Queue"
+    },
+    {
+      "type": "ul",
+      "value": [
+      	"abstract data type with the following operations: Enqueue, Dequeue, Empty", 
+      	"can be implemented with either a linked list (with tail pointer) or an array.", 
+      	"each stack operation is O(1): Enqueue, Dequeue, Empty."
+      ]
+    },
+    {
+      "type": "h4",
+      "value": "Tree"
+    },
+    {
+      "type": "ul",
+      "value": [
+      	"is empty, or a node with: a key, and a list of child trees", 
+      	"node contains: key, chidlren, parent(optional)", 
+      	"for binary tree, node contains: key, left, right, parent(optional)",
+      	"rree walks: DFS (pre-order, in-order, post-order) and BFS.",
+      	"when working with a tree, recursive algorithms are common.",
+      	"In Computer Science, trees grow down!"
+      ]
+    },
+    {
+      "type": "h4",
+      "value": "Dynamic Array"
+    },
+    {
+      "type": "ul",
+      "value": [
+      	"abstract data type with the following operations (at a minimum): Get, Set, PushBack, Remove Size", 
+      	"unlike static arrays, dynamic arrays can be resized.", 
+      	"appending a new element to a dynamic array is often constant time, but can take O(n).",
+      	"some space is wasted—at most half"
+      ]
+    },
+    {
+      "type": "h4",
+      "value": "Priority Queue"
+    },
+    {
+      "type": "ul",
+      "value": [
+      	"a generalization of a queue where each element is assigned a priority and elements come out in order by priority", 
+      	"an abstract data type supporting the following main operations: Insert, ExtractMax", 
+      	"additional operations: Remove, GetMax, ChangePriority"
+      ]
+    },
+    {
+      "type": "h4",
+      "value": "Binary max-heap"
+    },
+    {
+      "type": "ul",
+      "value": [
+      	"a binary tree (each node has zero, one, or two children) where the value of each node is at least the values of its children.", 
+      	"for each edge of the tree, the value of the parent is at least the value of the child.", 
+      	"additional operations: Remove, GetMax, ChangePriority"
+      ]
+    },
+    {
+      "type": "h4",
+      "value": "Complete Binary Tree"
+    },
+    {
+      "type": "ul",
+      "value": [
+      	"all its levels are filled except possibly the last one which is filled from left to right.", 
+      	"for each edge of the tree, the value of the parent is at least the value of the child.", 
+      	"additional operations: Remove, GetMax, ChangePriority"
+      ]
     }
   ]
 }

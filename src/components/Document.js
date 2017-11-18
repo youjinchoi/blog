@@ -25,7 +25,21 @@ class Document extends Component {
                                 return (
                                     <p key={index}>{content.value}</p>
                                 );
-                            } else {
+                            } else if (content.type == "h4") {
+                            	return (
+                            	    <h4 key={index}>{content.value}</h4>
+                            	);
+                        	} else if (content.type == "ul") {
+                        		return (
+                        		    <ul>
+                        		    	{content.value.map((data, index)=>{
+                        		    		return (
+                        		    		    <li>{data}</li>		
+                        		    		);
+                        		    	})}
+                        		    </ul>		
+                        		);
+                        	} else {
                                 return null;
                             }
                         })}
