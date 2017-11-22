@@ -1,0 +1,66 @@
+{
+  "title": "[javascript] null과 undefined",
+  "createDate": 1511360449167,
+  "contents": [
+    {
+      "type": "text",
+      "value": "정확히 알지 못하고 사용했던 javascript 개념정리 시리즈 1"
+    },
+    {
+      "type": "h4",
+      "value": "null"
+    },
+    {
+      "type": "ul",
+      "value": [
+      	"아무 값도 갖지 않음을 가리킬 때 사용",
+      	"프로그램 레벨에서 예상되는 값이 없을 때 사용"
+      ]
+    },
+    {
+      "type": "h4",
+      "value": "undefined"
+    },
+    {
+      "type": "ul",
+      "value": [
+      	"값 자체가 없다는 뜻",
+      	"초기화되어 있지 않거나, 존재하지 않는 객체 프로퍼티나 배열의 원소 값에 접근하려고 할 때 얻는 변수의 값",
+      	"반환 값이 없는 함수와 인자가 없는 함수 매개변수의 값에 의해 반환됨",
+      	"시스템 레벨에서 예기치 않거나 값이 없어서 에러를 나타날 때 사용"
+      ]
+    },
+    {
+      "type": "h4",
+      "value": "test code"
+    },
+    {
+      "type": "ul",
+      "value": [
+        "typeof null // \"object\"",
+        "typeof undefined // \"undefined\"",
+        "null == undefined // true",
+        "null === undefined // false",
+        "!!null // false",
+        "!!undefined // false"
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "br"
+    },
+    {
+      "type": "h3",
+      "value": "결론"
+    },
+    {
+      "type": "br"
+    },
+    {
+      "type": "text",
+      "value": "프로그래밍 시에 변수나 프로퍼티에 할당할 필요가 있거나 함수에 전달할 필요가 있다면, undefined 보다는 null을 사용하는게 적절하다."
+    }
+  ]
+}

@@ -1,5 +1,11 @@
 [
   {
+    "id": "null-and-undefined",
+    "title": "[javascript] null과 undefined",
+    "createDate": 1511360449167,
+    "summary": "정확히 알지 못하고 사용했던 javascript 개념정리 시리즈 1"
+  },
+  {
     "id": "react-app-on-github-page",
     "title": "React로 GitHub Page 만들기",
     "createDate": 1510578723697,

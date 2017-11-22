@@ -25,6 +25,18 @@ class Document extends Component {
                                 return (
                                     <p key={index}>{content.value}</p>
                                 );
+                            } else if (content.type == "hr") {
+                                return (
+                                    <hr key={index}/>
+                                );
+                            }  else if (content.type == "br") {
+                                return (
+                                    <br key={index}/>
+                                );
+                            } else if (content.type == "h3") {
+                                return (
+                                    <h3 key={index}>{content.value}</h3>
+                                );
                             } else if (content.type == "h4") {
                             	return (
                             	    <h4 key={index}>{content.value}</h4>
